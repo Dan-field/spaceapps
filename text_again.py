@@ -28,6 +28,7 @@ def get_year():
     myLabel.image = pic
 
     words = textArray[sliderVal - 1]
+    text.delete(1.0, END)
     text.insert(INSERT, words)
 
 
@@ -49,7 +50,7 @@ B = Button(root, text='Go to', command=get_year)
 B.pack()
 
 #text
-text = Text(root, font=('Arial', 32), fg = 'dark blue', padx = 6, pady = 6)
+text = Text(root, font=('Arial', 32), fg = 'dark blue', padx = 6, pady = 6, wrap = 'word')
 text.insert(INSERT, textArray[0])
 text.pack()
 
